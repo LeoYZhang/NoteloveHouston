@@ -1,0 +1,66 @@
+@import '../styles/variables.scss';
+
+.Navbar {
+  display: flex;
+  padding: 2rem;
+}
+
+.logoContainer {
+  margin-right: auto;
+}
+
+.logo {
+  height: 3rem;
+  margin-top: .5rem;
+}
+
+.pages {
+  display: flex;
+  align-items: center;
+
+  & .page:not(:last-child) {
+    border-right: 1px solid $pink;
+  }
+}
+
+.page {
+  font-size: 1.2rem;
+  padding: 0 1rem;
+}
+
+.link {
+  text-decoration: none;
+  color: $pink;
+  transition-duration: .3s;
+
+  &:hover {
+    color: $dark-pink;
+  }
+}
+
+.aboutDropdown {
+  &_open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transform: translate(-1rem, 0);
+    background-color: white;
+    padding-top: 1rem;
+    border-radius: 3px;
+    overflow: hidden;
+
+    & .link {
+      padding: .5rem 1rem;
+      border-top: 1px solid $pink;
+      transition-duration: .3s;
+
+      &:hover {
+        background-color: $white-gray;
+      }
+    }
+  }
+
+  &_closed {
+    display: none;
+  }
+}

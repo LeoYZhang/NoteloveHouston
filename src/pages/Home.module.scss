@@ -1,0 +1,109 @@
+@import '../styles/variables.scss';
+
+.banner {
+  background-color: $pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12rem 0;
+
+  &_text {
+    color: white;
+    font-size: 5.5rem;
+    font-weight: 300;
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0;
+
+  &_text {
+    color: $pink;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.register {
+  display: flex;
+  background-color: $light-pink;
+  align-items: center;
+  padding: 4rem 4rem;
+  gap: 4rem;
+
+  &_type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap: 2rem;
+    width: 25vw;
+
+    &_name {
+      color: white;
+      font-weight: 600;
+      font-size: 3rem;
+    }
+
+    &_text {
+      color: white;
+      font-size: 1.7rem;
+      font-weight: 300;
+    }
+  }
+}
+
+.donate {
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+
+  &_imgDiv {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_img {
+    width: 25rem;
+    background-color: $light-pink;
+    padding: 2rem;
+  }
+
+  &_info {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 10vw;
+
+    &_text {
+      color: $pink;
+      font-size: 3rem;
+      text-align: center;
+    }
+  }
+}
+
+.otherChapter {
+  padding: 8rem 0;
+  background-color: $light-pink;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+
+  &_text {
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}

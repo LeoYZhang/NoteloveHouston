@@ -1,0 +1,49 @@
+@import '../styles/variables.scss';
+
+.Footer {
+    background-color: $pink;
+    padding: 4rem;
+}
+
+.contactDesc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &_text1 {
+        color: white;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-right: 1rem;
+    }
+
+    &_text2 {
+        color: white;
+        font-size: 1.2rem;
+    }
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_email {
+        color: white;
+    }
+
+    &_socials {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.divider {
+    border: 1px solid white;
+    margin: .5rem 0;
+}
+
+.copyright {
+    color: white;
+}

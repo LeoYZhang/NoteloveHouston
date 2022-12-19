@@ -22,7 +22,9 @@ export default function Register() {
           <li>Within 1-2 weeks, we will send a confirmation email and connect you with an instructor.</li>
           <li>Discuss with your instructor to set up meeting times and locations.</li>
         </ol>
-        <Button text='Student Sign Up' />
+        <a href='https://docs.google.com/forms/d/e/1FAIpQLSecOBh7SCsQeQCMkBeyLGEZAdpJBd6Ojr89dJne6FV7CCLeRQ/viewform?usp=sf_link' target='_blank' rel='noreferrer noopener'>
+          <Button text='Student Sign Up' />
+        </a>
       </section>
 
       <section className={styles.instructors}>
@@ -33,7 +35,9 @@ export default function Register() {
           <li>Within 1-2 weeks, we will send an email with the results of the audition.</li>
           <li>If you are matched with any students, we will send you an email with their contact details. After this point, it is up to you to contact your student and discuss lesson details.</li>
         </ol>
-        <Button text='Instructor Sign Up' />
+        <a href='https://docs.google.com/forms/d/e/1FAIpQLSfhbMebTT8119st8qhNLApKrnDm89ltA-ZE53uQYQN87T9ZMg/viewform?usp=sf_link' target='_blank' rel='noreferrer noopener'>
+          <Button text='Instructor Sign Up' />
+        </a>
       </section>
 
       <Footer />

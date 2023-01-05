@@ -10,7 +10,7 @@
     &_title {
         color: white;
         font-size: 2.5rem;
-        margin: 0 10rem;
+        margin: 0 6rem;
         text-align: center;
         font-weight: 600;
     }
@@ -39,9 +39,10 @@
     padding: 5rem 5rem;
     background-color: $light-pink;
     display: flex;
+    flex-direction: column;
+    gap: 4rem;
 
     &_content {
-        width: 50%;
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -60,7 +61,6 @@
     }
 
     &_imgDiv {
-        width: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -69,5 +69,16 @@
     &_img {
         border: 5px solid $pink;
         width: 70%;
+    }
+}
+
+@media (min-width: 768px) {
+    .origin {
+      flex-direction: row;
+      gap: 0;
+
+      &_content {
+          width: 100%;
+      }
     }
 }

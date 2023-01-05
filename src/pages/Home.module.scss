@@ -8,6 +8,7 @@
   padding: 12rem 0;
 
   &_text {
+    text-align: center;
     color: white;
     font-size: 5.5rem;
     font-weight: 300;
@@ -22,15 +23,18 @@
   padding: 8rem 0;
 
   &_text {
+    text-align: center;
     color: $pink;
     font-size: 2.5rem;
     font-weight: 600;
+    margin: 0 2rem 1.5rem 2rem;
     margin-bottom: 1.5rem;
   }
 }
 
 .register {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   background-color: $light-pink;
   align-items: center;
@@ -42,7 +46,6 @@
     flex-direction: column;
     justify-content: center; 
     gap: 2rem;
-    width: 25vw;
 
     &_name {
       color: white;
@@ -62,26 +65,34 @@
   }
 }
 
+@media (min-width: 768px) {
+  .register {
+    flex-direction: row;
+  }
+}
+
 .donate {
   display: flex;
+  flex-direction: column-reverse;
+  gap: 4rem;
   align-items: center;
   padding: 4rem 0;
 
   &_imgDiv {
-    width: 50vw;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   &_img {
-    width: 30vw;
+    width: 80%;
     background-color: $light-pink;
     padding: 2rem;
   }
 
   &_info {
-    width: 30vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,6 +108,13 @@
   }
 }
 
+@media (min-width: 768px) {
+  .donate {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
 .otherChapter {
   padding: 8rem 0;
   background-color: $light-pink;
@@ -107,6 +125,7 @@
   justify-content: center;
 
   &_text {
+    text-align: center;
     color: white;
     font-size: 3rem;
     font-weight: 600;

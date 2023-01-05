@@ -39,7 +39,7 @@
   background-color: $light-pink;
   align-items: center;
   padding: 4rem 4rem;
-  gap: 4rem;
+  gap: 2rem;
 
   &_type {
     display: flex;
@@ -68,6 +68,7 @@
 @media (min-width: 768px) {
   .register {
     flex-direction: row;
+    gap: 4rem;
   }
 }
 

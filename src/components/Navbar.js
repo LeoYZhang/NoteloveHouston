@@ -5,6 +5,17 @@ import logo from '../assets/logo_white.png';
 
 export default function Navbar() {
   const [aboutDropState, setAboutDropState] = useState(false);
+  const [hamburgerState, setHamburgerState] = useState(false);
+
+  if(!hamburgerState)
+    document.body.style.overflow = "visible";
+  const toggleHamburger = () => {
+    setHamburgerState(!hamburgerState);
+    if(!hamburgerState)
+      document.body.style.overflow = "hidden";
+    else
+      document.body.style.overflow = "visible";
+  }
 
   return (
     <div className={styles.Navbar}>
@@ -13,6 +24,7 @@ export default function Navbar() {
           <img src={logo} alt='Notelove Logo' className={styles.logo} />
         </Link>
       </div>
+
       <div className={styles.pages}>
         <div className={styles.page}>
           <Link to='/' className={styles.link}>Home</Link>
@@ -39,6 +51,48 @@ export default function Navbar() {
 
         <div className={styles.page}>
           <Link to='/donate' className={styles.link}>Support Us</Link>
+        </div>
+      </div>
+
+      <div className={`${styles.hamburger} ${hamburgerState && styles.hamburger_active}`} onClick={toggleHamburger}>
+          <span className={`${styles.hamburger_line_1} ${styles.hamburger_line}`}></span>
+          <span className={`${styles.hamburger_line_2} ${styles.hamburger_line}`}></span>
+          <span className={`${styles.hamburger_line_3} ${styles.hamburger_line}`}></span>
+      </div>
+
+      <div className={`${styles.mobile} ${!hamburgerState && styles.mobile_hidden}`}>
+        <div className={`${styles.mobile_pages} ${!hamburgerState && styles.mobile_pages_hidden}`}>
+          <div className={styles.mobile_page}>
+            <Link to='/' className={styles.mobile_link}>Home</Link>
+          </div>
+
+          <div className={styles.mobile_page}>
+            <Link to='/about' className={styles.mobile_link}>About</Link>
+          </div>
+
+          <div className={styles.mobile_page}>
+            <Link to='/about/faq' className={styles.mobile_link}>FAQ</Link>
+          </div>
+
+          <div className={styles.mobile_page}>
+            <Link to='/about/directors' className={styles.mobile_link}>Directors</Link>
+          </div>
+
+          <div className={styles.mobile_page}>
+            <Link to='/about/instructors' className={styles.mobile_link}>Instructors</Link>
+          </div>
+
+          <div className={styles.mobile_page}>
+            <Link to='/register' className={styles.mobile_link}>Register</Link>
+          </div>
+
+          <div className={styles.mobile_page}>
+            <Link to='/events' className={styles.mobile_link}>Events</Link>
+          </div>
+
+          <div className={styles.mobile_page}>
+            <Link to='/donate' className={styles.mobile_link}>Support Us</Link>
+          </div>
         </div>
       </div>
     </div>

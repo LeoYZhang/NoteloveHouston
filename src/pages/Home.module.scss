@@ -86,7 +86,7 @@
   }
 
   &_img {
-    width: 80%;
+    width: 60%;
     background-color: $light-pink;
     padding: 2rem;
   }
@@ -112,6 +112,14 @@
   .donate {
     flex-direction: row;
     gap: 0;
+
+    &_imgDiv {
+      width: 60%;
+    }
+
+    &_info {
+      width: 60%;
+    }
   }
 }
 

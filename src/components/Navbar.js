@@ -2,6 +2,7 @@ import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.scss';
 import logo from '../assets/logo_white.png';
+import Div100vh from 'react-div-100vh';
 
 export default function Navbar() {
   const [aboutDropState, setAboutDropState] = useState(false);
@@ -11,10 +12,12 @@ export default function Navbar() {
     document.body.style.overflow = "visible";
   const toggleHamburger = () => {
     setHamburgerState(!hamburgerState);
-    if(!hamburgerState)
+    if(!hamburgerState) {
       document.body.style.overflow = "hidden";
-    else
+      window.scrollTo(0, 0);
+    }else {
       document.body.style.overflow = "visible";
+    }
   }
 
   return (
@@ -61,7 +64,7 @@ export default function Navbar() {
       </div>
 
       <div className={`${styles.mobile} ${!hamburgerState && styles.mobile_hidden}`}>
-        <div className={`${styles.mobile_pages} ${!hamburgerState && styles.mobile_pages_hidden}`}>
+        <Div100vh className={`${styles.mobile_pages} ${!hamburgerState && styles.mobile_pages_hidden}`}>
           <div className={styles.mobile_page}>
             <Link to='/' className={styles.mobile_link}>Home</Link>
           </div>
@@ -93,7 +96,7 @@ export default function Navbar() {
           <div className={styles.mobile_page}>
             <Link to='/donate' className={styles.mobile_link}>Support Us</Link>
           </div>
-        </div>
+        </Div100vh>
       </div>
     </div>
   );

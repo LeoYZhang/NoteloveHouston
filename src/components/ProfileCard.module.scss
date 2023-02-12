@@ -11,10 +11,6 @@
   align-items: center;
   width: fit-content;
 
-  &:hover {
-    cursor: pointer;
-  }
-
   &_text {
     display: flex;
     flex-direction: column;
@@ -36,6 +32,10 @@
     border: 5px solid $pink;
     margin-bottom: .75rem;
   }
+}
+
+.clickable:hover {
+  cursor: pointer;
 }
 
 .expanded {

@@ -2,13 +2,13 @@ import { React, useState } from 'react';
 import styles from './ProfileCard.module.scss';
 import BlankProfile from '../assets/profiles/blank.png';
 
-export default function ProfileCard({ name, photoSrc, label, description }) {
+export default function ProfileCard({ name, photoSrc, label, description, disabled = false }) {
   const ProfilePic = photoSrc || BlankProfile;
   const [open, setOpen] = useState(false);
 
   return (
     <div className={styles.container}>
-      <div className={open ? styles.hidden : styles.compact} onClick={() => setOpen(true)}>
+      <div className={open ? styles.hidden : `${styles.compact} ${!disabled && styles.clickable}`} onClick={() => (!disabled && setOpen(true))}>
         <div>
           <img src={ProfilePic} alt={name} className={styles.compact_img}/>
         </div>
@@ -27,7 +27,7 @@ export default function ProfileCard({ name, photoSrc, label, description }) {
             <p className={styles.expanded_label}>{label}</p>
             <p className={styles.expanded_desc}>{description}</p>
           </div>
-          <div className={styles.expanded_close} onClick={() => setOpen(false)}>x</div>
+          <div className={styles.expanded_close} onClick={() => (!disabled && setOpen(false))}>x</div>
         </div>
       </div>
     </div>

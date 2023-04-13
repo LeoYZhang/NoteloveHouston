@@ -15,7 +15,7 @@ const Layout = ({ children, title = 'Notelove Houston' }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <header>
-      <nav>
+      <nav className='bg-blue-300'>
         Navbar
       </nav>
     </header>

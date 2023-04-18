@@ -26,4 +26,4 @@ const Layout = ({ children, title = 'Notelove Houston' }: Props) => (
   </div>
 )
 
-export default Layout
+export default Layout;
